@@ -72,7 +72,7 @@ void inicializaTexturas(){
 	text_terra = carregaTextura("terra.png");
 	text_jupiter = carregaTextura("jupiter.png");
 	text_marte = carregaTextura("marte.png");
-	idTexturaFundo = carregaTextura("galaxia.png");
+	idTexturaFundo = carregaTextura("estrelas.png");
 
 }
 
@@ -223,17 +223,19 @@ void Desenha(void)
 		glRasterPos2f(0,-2.8);
 		glBindTexture(GL_TEXTURE_2D,text_mercurio);
 		glTranslated(6*-cos(a*0.3),0, 6*-sin(a*0.3));
-		glRotated(-20*a, 0, 0, 1);
+		glRotated(-20*a, 0, 1, 0);
+		glRotatef(90, -1, 0, 0);
 		glCallList(planetas[1]);
 	glPopMatrix();
 
 	//Desenha Venus
 	glPushMatrix();
 		
-		glRasterPos2f(0,-1.9);
+		glRasterPos2f(0,-2.8);
 		glBindTexture(GL_TEXTURE_2D,text_venus);
-		glTranslated(11*-cos(a*0.1),0, 11*-sin(a*0.1));
-		glRotated(-20*a, 0, 0, 1);
+		glTranslated(10*-cos(a*0.1),0, 10*-sin(a*0.1));
+		glRotated(-20*a, 0, 1, 0);
+		glRotatef(90, -1, 0, 0);
 		glCallList(planetas[2]);
 	glPopMatrix();
  
@@ -241,8 +243,9 @@ void Desenha(void)
 	glPushMatrix();
 		glRasterPos2f(0,-2.8);
 		glBindTexture(GL_TEXTURE_2D,text_terra);
-		glTranslated(16*-cos(a*0.088),0, 16*-sin(a*0.09));
-		glRotated(-20*a, 0, 0, 1);
+		glTranslated(20*-cos(a*0.088),0, 20*-sin(a*0.088));
+		glRotated(-20*a, 0, 1, 0);
+        glRotatef(90, -1, 0, 0);
 		glCallList(planetas[3]);
 	glPopMatrix();
 
@@ -250,8 +253,9 @@ void Desenha(void)
 	glPushMatrix();
 		glRasterPos2f(0,-2.8);
 		glBindTexture(GL_TEXTURE_2D,text_marte);
-		glTranslated(21*-cos(a*0.040),0, 21*-sin(a*0.040));
-		glRotated(-20*a, 0, 0, 1);
+		glTranslated(35*-cos(a*0.040),0, 35*-sin(a*0.040));
+		glRotated(-20*a, 0, 1, 0);
+		glRotatef(90, -1, 0, 0);
 		glCallList(planetas[8]);
 	glPopMatrix();
 	
@@ -259,8 +263,9 @@ void Desenha(void)
 	glPushMatrix();
 		glRasterPos2f(0,-2.8);
 		glBindTexture(GL_TEXTURE_2D,text_jupiter);
-		glTranslated(31*-cos(a*0.025),5, 31*-sin(a*0.025));
-		glRotated(-20*a, 0, 0, 1);
+		glTranslated(45*-cos(a*0.035),0, 45*-sin(a*0.035));
+		glRotated(-20*a, 0, 1, 0);
+		glRotatef(90, -1, 0, 0);
 		glCallList(planetas[4]);
 	glPopMatrix();
 	
@@ -268,8 +273,9 @@ void Desenha(void)
 	glPushMatrix();
 		glRasterPos2f(0,-2.8);
 		glBindTexture(GL_TEXTURE_2D,text_saturno);
-		glTranslated(41*-cos(a*0.020),0,41*-sin(a*0.020));
-		glRotated(-20*a, 0, 0, 1);
+		glTranslated(55*-cos(a*0.027),0,55*-sin(a*0.027));
+		glRotated(-20*a, 0, 1, 0);
+		glRotatef(90, -1, 0, 0);
 		glCallList(planetas[5]);
 	glPopMatrix();
 	
@@ -278,8 +284,9 @@ void Desenha(void)
 	glPushMatrix();
 		glRasterPos2f(0,-2.8);
 		glBindTexture(GL_TEXTURE_2D,text_urano);
-		glTranslated(51*-cos(a*0.015),0, 51*-sin(a*0.015));
-		glRotated(-20*a, 0, 0, 1);
+		glTranslated(65*-cos(a*0.02),0, 65*-sin(a*0.02));
+		glRotated(-20*a, 0, 1, 0);
+		glRotatef(90, -1, 0, 0);
 		glCallList(planetas[6]);
 	glPopMatrix();
 	
@@ -287,8 +294,9 @@ void Desenha(void)
 	glPushMatrix();
 		glRasterPos2f(0,-2.8);
 		glBindTexture(GL_TEXTURE_2D,text_netuno);
-		glTranslated(61*-cos(a*0.01),0, 61*-sin(a*0.01));
-		glRotated(-20*a, 0, 0, 1);
+		glTranslated(75*-cos(a*0.01),0, 75*-sin(a*0.01));
+		glRotated(-20*a, 0, 1, 0);
+		glRotatef(90, -1, 0, 0);
 		glCallList(planetas[7]);
 	glPopMatrix();
 	
@@ -449,7 +457,7 @@ void TeclasEspeciais (int tecla, int x, int y)
 							break;
 		case GLUT_KEY_F1:
 			
-			rotX = 30;
+			rotX = 100;
 			rotY = 15;
 			obsZ = 300;
 				
@@ -506,7 +514,7 @@ int main()
     glutInitWindowPosition(5,5);
 
 	// Especifica o tamanho inicial em pixels da janela GLUT
-	glutInitWindowSize(1000,800);
+	glutInitWindowSize(1280,800);
 
 	// Cria a janela passando como argumento o titulo da mesma
 	glutCreateWindow("TP2 - Sistema Solar");
