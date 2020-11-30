@@ -83,11 +83,11 @@ void DefineIluminacao (void)
         GLfloat luzAmbiente[4]={0.4,0.4,0.4,1.0}; 
         GLfloat luzDifusa[4]={0.7,0.7,0.7,1.0};          // "cor" 
         GLfloat luzEspecular[4]={1.0, 1.0,1.0, 1.0};// "brilho" 
-        GLfloat posicaoLuz[4]={0.0, 50.0, 50.0, 1.0};
+        GLfloat posicaoLuz[4]={1.35,1.35, 8, 1.0};
  
         // Capacidade de brilho do material
-        GLfloat especularidade[4]={1.0,1.0,1.0,1.0}; 
-        GLint especMaterial = 60 ;
+        GLfloat especularidade[4]={0.8,0.8,0.8,1.0}; 
+        GLint especMaterial = 100 ;
  
         // Define a reflet�ncia do material 
         glMaterialfv(GL_FRONT,GL_SPECULAR, especularidade);
@@ -95,10 +95,10 @@ void DefineIluminacao (void)
         glMateriali(GL_FRONT,GL_SHININESS,especMaterial);
  
         // Ativa o uso da luz ambiente 
-        glLightModelfv(GL_LIGHT_MODEL_AMBIENT, luzAmbiente);
+       // glLightModelfv(GL_LIGHT_MODEL_AMBIENT, luzAmbiente);
  
         // Define os par�metros da luz de n�mero 0
-        glLightfv(GL_LIGHT0, GL_AMBIENT, luzAmbiente); 
+       // glLightfv(GL_LIGHT0, GL_AMBIENT, luzAmbiente); 
         glLightfv(GL_LIGHT0, GL_DIFFUSE, luzDifusa );
         glLightfv(GL_LIGHT0, GL_SPECULAR, luzEspecular );
         glLightfv(GL_LIGHT0, GL_POSITION, posicaoLuz );   
@@ -208,15 +208,18 @@ void rotacionaEsfera(){
 // Fun��o callback chamada para fazer o desenho
 void Desenha(void)
 {
-	glDrawBuffer(GL_BACK);
+
+	//glDrawBuffer(GL_BACK);
 	// Limpa a janela de visualiza��o com a cor
 	// de fundo definida previamente
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
-	//
-	glPushMatrix();
+	glColor3f(1, 1, 1);
 
+	//Desenha Fundo
+	glPushMatrix();
 		glRasterPos2f(0,-2.8);
+		
 		glBindTexture(GL_TEXTURE_2D,idTexturaFundo);
 		glTranslated(0,0,0);
 		glCallList(planetas[9]);
@@ -228,15 +231,24 @@ void Desenha(void)
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D,text_sol);
 	glPushMatrix();
-		glTranslated(0,0,0);
-		glRotated(-10*a, 0, 1, 0);
-		glRotatef(90, -1, 0, 0);
-		//glRotated(30, 0, 0, 1);
-		gluSphere(qobj,3.52,25,25);
+	glTranslated(0,0,0);
+	glRotated(-2.5*a, 0, 1, 0);
+	glRotatef(90, -1, 0, 0);
+
+		gluSphere(qobj,3.52,100,100);
+		if(verificaIluminacao ==1){
+	
+			DefineIluminacao();
+			glEnable(GL_LIGHT0);
+		} else{
+			glDisable(GL_LIGHT0);
+		}	
+		
 	glPopMatrix();
-	//gluDeleteQuadric(qobj);
 	glDisable(GL_TEXTURE_2D);
 
+ 
+	DefineIluminacao();
 	//DesenhaMercurio
 	glPushMatrix();
 		glRasterPos2f(0,-2.8);
@@ -332,7 +344,7 @@ void Desenha(void)
 // Inicializa��o
 void Inicializa(void)
 {
-	especMaterial = 60;
+	especMaterial = 150;
 
 		//Habilita o uso da textura
 		glEnable (GL_TEXTURE_2D);
@@ -376,7 +388,7 @@ void PosicionaObservador(void)
 	glLoadIdentity();
 	
         // Chama a fun��o que especifica os par�metros de ilumina��o
-        DefineIluminacao(); // INCLUA ESTA LINHA
+        //DefineIluminacao(); // INCLUA ESTA LINHA
 	
 	// Especifica posi��o do observador e do alvo
 	//glTranslatef(0,0,-obsZ);
@@ -515,6 +527,9 @@ void TeclaPressionada(unsigned char key, int x, int y)
 	    	}
 
 	    	break;	
+		case 'c':
+			verificaIluminacao *=-1;
+			break;
 	}
 }
 
