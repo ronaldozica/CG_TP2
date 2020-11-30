@@ -1,6 +1,6 @@
 <h1>Obrigado por baixar nosso Sistema Solar :milky_way:! Aqui está o tutorial de como executá-lo:</h1>
 
-<h2>--> Feito e desenvolvido por:</h2> 
+<h2>→ Feito e desenvolvido por:</h2> 
   
   <br/> - Násser Rafael França Kilesse
   [![Github Badge](https://img.shields.io/badge/-NásserRafael-black?style=flat-square&logo=Github&logoColor=white&link=https://www.github.com/nasserrafaelfk/)](https://www.github.com/nasserrafaelfk/) | 
@@ -51,22 +51,22 @@ pelo comando:</h4>
 
 <h2>Comandos do jogo:</h2>
 
-<h4>Pressione <kbd>F1</kbd> para obter a vista superior do sistema</h4>
+<p> - Pressione <kbd>F1</kbd> para obter a vista superior do sistema</p>
 
-<h4>Pressione <kbd>F2</kbd> para obter a vista lateral do sistema</h4>
+<p> - Pressione <kbd>F2</kbd> para obter a vista lateral do sistema</p>
 
-<h4>Pressione <kbd>space</kbd> para pausar o sistema</h4>
+<p> - Pressione <kbd>space</kbd> para pausar o sistema</p>
 
-<h4>Pressione <kbd>c</kbd> para ativar/desativar a iluminação do Sol no sistema</h4>
+<p> - Pressione <kbd>c</kbd> para ativar/desativar a iluminação do Sol no sistema</p>
 
-<h4>Pressione <kbd>↑</kbd> para aumentar o ângulo de visualização do sistema</h4>
+<p> - Pressione <kbd>↑</kbd> para aumentar o ângulo de visualização do sistema</p>
 
-<h4>Pressione <kbd>↓</kbd> para diminuir o ângulo de visualização do sistema</h4>
+<p> - Pressione <kbd>↓</kbd> para diminuir o ângulo de visualização do sistema</p>
 
-<h4>Pressione <kbd>←</kbd> para diminuir a velocidade de rotação do sistema</h4>
+<p> - Pressione <kbd>←</kbd> para diminuir a velocidade de rotação do sistema</p>
 
-<h4>Pressione <kbd>→</kbd> para aumentar a velocidade de rotação do sistema</h4>
+<p> - Pressione <kbd>→</kbd> para aumentar a velocidade de rotação do sistema</p>
 
-<h4>Pressione <kbd>esc</kbd> para sair</h4>
+<p> - Pressione <kbd>esc</kbd> para sair</p>
 
 <h2>Não foram implementados itens adicionais.</h2>
