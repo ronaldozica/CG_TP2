@@ -67,6 +67,10 @@ pelo comando:</h4>
 
 <p> - Pressione <kbd>→</kbd> para aumentar a velocidade de rotação do sistema</p>
 
+<p> - Pressione <kbd>left mouse</kbd> para zoom in no sistema</p>
+
+<p> - Pressione <kbd>right mouse</kbd> para zoom out no sistema</p>
+
 <p> - Pressione <kbd>esc</kbd> para sair</p>
 
 <h2>Não foram implementados itens adicionais.</h2>
