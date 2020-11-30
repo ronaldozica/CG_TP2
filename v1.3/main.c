@@ -229,6 +229,8 @@ void Desenha(void)
 	glBindTexture(GL_TEXTURE_2D,text_sol);
 	glPushMatrix();
 		glTranslated(0,0,0);
+		glRotated(-10*a, 0, 1, 0);
+		glRotatef(90, -1, 0, 0);
 		//glRotated(30, 0, 0, 1);
 		gluSphere(qobj,3.52,25,25);
 	glPopMatrix();
