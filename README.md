@@ -27,7 +27,7 @@ será feita a atualização. Para isso, execute o comando no terminal:</h4>
 necessários para desenvolvermos alguns processos, pelo comando via terminal:</h4>
 <p><code>sudo apt-get install build-essential</code></p>
 <p>No meu caso, todas ferramentas já estão instaladas. Entretanto, caso apareça uma
-mensagem perguntando se deseja continuar, pressione <kbd>s</kbd> e logo em seguida <kbd>enter</kbd>.</p>
+mensagem perguntando se deseja continuar, pressione <kbd>s</kbd> e logo em seguida <kbd>↵</kbd>.</p>
 
 <h4>4) A partir de agora iremos instalar todas as bibliotecas, começando pela FreeGlut
 pelo comando:</h4>
