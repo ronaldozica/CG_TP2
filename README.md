@@ -49,4 +49,24 @@ pelo comando:</h4>
 <p><code>make run</code></p>
 <p>Pronto, você já está jogando!</p>
 
-<h2>Não foram implementados itens adicionais</h2>
+<h2>Comandos do jogo:</h2>
+
+<h4>Pressione <kbd>F1</kbd> para obter a vista superior do sistema</h4>
+
+<h4>Pressione <kbd>F2</kbd> para obter a vista lateral do sistema</h4>
+
+<h4>Pressione <kbd>space</kbd> para pausar o sistema</h4>
+
+<h4>Pressione <kbd>c</kbd> para ativar/desativar a iluminação do Sol no sistema</h4>
+
+<h4>Pressione <kbd>↑</kbd> para aumentar o ângulo de visualização do sistema</h4>
+
+<h4>Pressione <kbd>↓</kbd> para diminuir o ângulo de visualização do sistema</h4>
+
+<h4>Pressione <kbd>←</kbd> para diminuir a velocidade de rotação do sistema</h4>
+
+<h4>Pressione <kbd>→</kbd> para aumentar a velocidade de rotação do sistema</h4>
+
+<h4>Pressione <kbd>esc</kbd> para sair</h4>
+
+<h2>Não foram implementados itens adicionais.</h2>
